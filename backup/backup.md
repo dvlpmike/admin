@@ -8,5 +8,5 @@
 **Example usage**
 Create an encrypted backup of data_to_encrypt. Input can be dir or file.
 ```sh
-./run-encrypt-backup.sh -e data_to_encrypt 
+./run-backup-linux.sh -e data_to_encrypt 
 ```
