@@ -1,6 +1,6 @@
-## Monitoring
+# Monitoring
 
-# Check that the hosts are available
+## Check that the hosts are available
 ```ps1
 $hosts = Get-Content "hosts.txt"
 foreach ($name in $hosts){
