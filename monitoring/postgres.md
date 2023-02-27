@@ -5,7 +5,10 @@
 -- For cli
 SELECT nspname || '.' || relname AS "relation", pg_size_pretty(pg_total_relation_size(C.oid)) AS "total_size" FROM pg_class C LEFT JOIN pg_namespace N ON (N.oid = C.relnamespace) WHERE nspname NOT IN ('pg_catalog', 'information_schema') AND C.relkind <> 'i' AND nspname !~ '^pg_toast' ORDER BY pg_total_relation_size(C.oid) DESC;
 ```
-
+## Run the Sql query and save the results as a csv file
+```sh
+psql -U <database_user> -d <database_name> -F ',' -A -o results.csv query.sql
+```
 ## Vacuum
 Path to config file `/var/lib/pgsql/12/data/postgresql.conf`
 ```sql
